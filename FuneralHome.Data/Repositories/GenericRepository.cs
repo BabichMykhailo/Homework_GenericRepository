@@ -55,7 +55,7 @@ namespace FuneralHome.Data.Repositories
 
         public IEnumerable<T> GetByDelegate(Expression<Func<T, bool>> del)
         {
-            return _table.Where(del);
+            return _table.Where(del).ToList();
         }
     }
 }
